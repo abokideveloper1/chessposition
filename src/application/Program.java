@@ -1,13 +1,11 @@
 package application;
-import boardclasses.Positions;
+import boardclasses.Board;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		Positions position = new Positions(3 , 5);
-		
-		System.out.println(position);
+		Board board = new Board(8 , 8);
 
 	}
 
