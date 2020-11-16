@@ -1,5 +1,7 @@
 package boardclasses;
 
+import java.util.Arrays;
+
 public class Board {
 	
 	private int rows;
@@ -27,10 +29,21 @@ public class Board {
 	public void setColumns(int columns) {
 		this.columns = columns;
 	}
-	
-	
-	
+
+  public Pieces pieces(int row,int column) {
+	  
+	  return pieces [row] [column];
+  }
+  
+  public Pieces pieces(Positions positions) {
+	  
+	  return pieces [positions.getRows()] [positions.getColumns()];
+	  
+  }
+  
+  
 	
 	
 
+	
 }
