@@ -1,6 +1,10 @@
 package chess;
 
 import boardclasses.Board;
+import boardclasses.Positions;
+import chess.pieces.King;
+import chess.pieces.Rook;
+
 
 public class ChessRules {
 	
@@ -9,6 +13,8 @@ public class ChessRules {
 	public ChessRules() {
 		
 		board = new Board(8,8);
+		
+		initializeSetup();
 		
 	}
 	
@@ -35,4 +41,12 @@ public class ChessRules {
 	return game;
 
 }
+	private void initializeSetup() {
+		
+		board.placePiece(new Rook(board , Color.WHITE) , new Positions(2 , 1));
+		board.placePiece(new King(board , Color.BLACK),new Positions(0 ,4));
+		board.placePiece(new King(board , Color.WHITE), new Positions(7 ,4));
+		
+	}
 }
+
